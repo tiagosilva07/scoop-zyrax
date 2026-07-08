@@ -1,0 +1,38 @@
+{
+  "version": "0.11.0",
+  "description": "Audit AI agent configs (prompt injection, rogue MCP servers) and vet packages — local, zero-dependency",
+  "homepage": "https://zyrax.io",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/tiagosilva07/zyrax-guard/releases/download/v0.11.0/zyrax-guard-windows-amd64.exe#/zyrax-guard.exe",
+      "hash": "5fa7aa881905422e663515196ef36ecb1bcc248d8d46d7ebee9d1b0df46be3eb"
+    },
+    "arm64": {
+      "url": "https://github.com/tiagosilva07/zyrax-guard/releases/download/v0.11.0/zyrax-guard-windows-arm64.exe#/zyrax-guard.exe",
+      "hash": "f8c7eba8cb4ed0cd59d2116e9c9b91eedbdb62a5bd68ec161474f35010484ebb"
+    }
+  },
+  "bin": "zyrax-guard.exe",
+  "checkver": {
+    "github": "https://github.com/tiagosilva07/zyrax-guard"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/tiagosilva07/zyrax-guard/releases/download/v$version/zyrax-guard-windows-amd64.exe#/zyrax-guard.exe",
+        "hash": {
+          "url": "https://github.com/tiagosilva07/zyrax-guard/releases/download/v$version/checksums.txt",
+          "regex": "([a-fA-F0-9]{64})\\s+zyrax-guard-windows-amd64\\.exe"
+        }
+      },
+      "arm64": {
+        "url": "https://github.com/tiagosilva07/zyrax-guard/releases/download/v$version/zyrax-guard-windows-arm64.exe#/zyrax-guard.exe",
+        "hash": {
+          "url": "https://github.com/tiagosilva07/zyrax-guard/releases/download/v$version/checksums.txt",
+          "regex": "([a-fA-F0-9]{64})\\s+zyrax-guard-windows-arm64\\.exe"
+        }
+      }
+    }
+  }
+}
